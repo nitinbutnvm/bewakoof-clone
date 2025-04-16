@@ -59,7 +59,7 @@ function addToCart(product) {
     }
     updateCart();
     showCartNotification();
-}
+
 
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
@@ -133,6 +133,10 @@ if (document.querySelector('.sizes')) {
         });
     });
 }
+// In script.js
+window.addEventListener('load', function() {
+    document.querySelector('.loader').style.display = 'none';
+  });
 
 // Global function for removeFromCart
 window.removeFromCart = removeFromCart;

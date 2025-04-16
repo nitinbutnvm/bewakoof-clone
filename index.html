@@ -44,26 +44,23 @@
 </head>
 <body>
     <!-- Header/Navbar -->
-    <header>
-        <div class="top-bar">
-            <div class="logo">BEWAKOOF</div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search for products...">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <div class="user-actions">
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-heart"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
-            </div>
-        </div>
-        <nav>
-            <a href="#">MEN</a>
-            <a href="#">WOMEN</a>
-            <a href="#">MOBILE COVERS</a>
-            <a href="#">OFFERS</a>
-        </nav>
-    </header>
+  <!-- Replace your <header> in index.html -->
+<header class="sticky-nav">
+    <div class="container">
+      <div class="logo" onclick="window.location='index.html'">BEWAKOOF</div>
+      
+      <div class="search-bar">
+        <input type="text" placeholder="Search for T-Shirts, Hoodies etc.">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      
+      <div class="nav-links">
+        <a href="#"><i class="far fa-user"></i> Login</a>
+        <a href="#"><i class="far fa-heart"></i> Wishlist</a>
+        <a href="#" class="cart-btn"><i class="fas fa-shopping-bag"></i> <span id="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
 
     <!-- Hero Banner -->
     <section class="hero">
@@ -98,7 +95,9 @@
             </div>
         </div>
     </div>
-
+    <div class="loader">
+        <img src="https://i.gifer.com/ZZ5H.gif" width="100px">
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
