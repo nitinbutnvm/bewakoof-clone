@@ -53,7 +53,10 @@ function addToCart(product) {
             quantity: 1
         });
     }
-    
+    setTimeout(() => {
+        closeCartModal(); // Closes cart after 2 seconds
+      }, 2000);
+    }
     updateCart();
     showCartNotification();
 }
@@ -133,3 +136,4 @@ if (document.querySelector('.sizes')) {
 
 // Global function for removeFromCart
 window.removeFromCart = removeFromCart;
+

@@ -343,3 +343,20 @@ footer {
     border-top: 1px solid #eee;
     padding-top: 20px;
 }
+body::after {
+    content: "Made with by Nitin";
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  :root {
+    --primary: #00b3b3;  /* Teal */
+    --secondary: #ff3f6c; /* Pink */
+    --dark: #333;
+  }
