@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Bewakoof Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Same Header as index.html -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">BEWAKOOF</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">MEN</a>
+            <a href="index.html">WOMEN</a>
+            <a href="index.html">MOBILE COVERS</a>
+            <a href="index.html">OFFERS</a>
+        </nav>
+    </header>
+
+    <!-- Product Details Section -->
+    <main class="product-details">
+        <div class="product-images">
+            <img src="https://images.bewakoof.com/t540/men-s-black-slim-fit-typography-t-shirt-597709-1704453198-1.jpg" alt="Men's Black T-Shirt" id="mainImage">
+            <div class="thumbnail-container">
+                <img src="https://images.bewakoof.com/t540/men-s-black-slim-fit-typography-t-shirt-597709-1704453198-1.jpg" alt="Thumbnail 1">
+                <img src="https://images.bewakoof.com/t540/men-s-black-slim-fit-typography-t-shirt-597709-1704453198-2.jpg" alt="Thumbnail 2">
+            </div>
+        </div>
+        
+        <div class="product-info">
+            <h1>Men's Black Typography T-Shirt</h1>
+            <div class="price">₹399 <span>₹799</span> <span class="discount">50% OFF</span></div>
+            
+            <div class="size-selector">
+                <h3>SELECT SIZE</h3>
+                <div class="sizes">
+                    <button>S</button>
+                    <button>M</button>
+                    <button class="selected">L</button>
+                    <button>XL</button>
+                    <button>XXL</button>
+                </div>
+            </div>
+            
+            <div class="product-actions">
+                <button class="add-to-cart">ADD TO CART</button>
+                <button class="wishlist"><i class="far fa-heart"></i> WISHLIST</button>
+            </div>
+            
+            <div class="product-description">
+                <h3>Product Details</h3>
+                <p>Black colored typography printed T-shirt made of 100% cotton. Regular fit with round neck and short sleeves.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Same Footer as index.html -->
+    <footer>
+        <p>© 2024 Bewakoof Clone</p>
+    </footer>
+
+    <!-- Same Cart Modal as index.html -->
+    <div class="cart-modal" id="cartModal">
+        <!-- ... copy cart modal code from index.html ... -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

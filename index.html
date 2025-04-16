@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bewakoof Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">BEWAKOOF</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+        <nav>
+            <a href="#">MEN</a>
+            <a href="#">WOMEN</a>
+            <a href="#">MOBILE COVERS</a>
+            <a href="#">OFFERS</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <img src="https://images.bewakoof.com/uploads/grid/app/StripBannerDesktop-Common-1-1703855580.jpg" alt="Hero Offer">
+    </section>
+
+    <!-- Product Grid -->
+    <main class="product-grid">
+        <div class="product-card" onclick="window.location.href='product.html'">
+            <img src="https://images.bewakoof.com/t540/men-s-black-slim-fit-typography-t-shirt-597709-1704453198-1.jpg" alt="Product">
+            <h3>Men's Black T-Shirt</h3>
+            <div class="price">₹399 <span>₹799</span> <span class="discount">50% OFF</span></div>
+        </div>
+        <!-- Add more product cards by copying the above div -->
+    </main>
+
+    <footer>
+        <p>© 2024 Bewakoof Clone </p>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <span class="close-cart">&times;</span>
+            <h2>Your Cart (<span id="cartCount">0</span>)</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will appear here dynamically -->
+            </div>
+            <div class="cart-total">
+                Total: ₹<span id="cartTotal">0</span>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
