@@ -452,3 +452,7 @@ body::after {
   .loader img {
     filter: hue-rotate(180deg);
   }
+  @media (max-width: 768px) {
+    .navbar { flex-direction: column; }
+    .product-card { width: 100%; }
+  }

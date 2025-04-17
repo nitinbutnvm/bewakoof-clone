@@ -1,5 +1,12 @@
 // Cart Data Structure
+
 let cart = [];
+
+// Fake auth demo
+function login() {
+    localStorage.setItem('user', 'Nitin');
+    alert("Welcome Nitin!");
+  }
 
 // DOM Elements
 const cartIcon = document.querySelector('.fa-shopping-bag');
@@ -24,6 +31,9 @@ const products = [
         image: "https://images.bewakoof.com/t540/women-s-pink-oversized-hoodie-597711-1704453200-1.jpg"
     }
 ];
+
+// Initialize - Hide cart modal by default
+cartModal.style.display = 'none';
 
 // Event Listeners
 cartIcon.addEventListener('click', openCart);
@@ -53,13 +63,15 @@ function addToCart(product) {
             quantity: 1
         });
     }
-    setTimeout(() => {
-        closeCartModal(); // Closes cart after 2 seconds
-      }, 2000);
-    }
+    
     updateCart();
     showCartNotification();
-
+    
+    // Auto-close cart after 2 seconds
+    setTimeout(() => {
+        closeCartModal();
+    }, 2000);
+}
 
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
@@ -107,7 +119,8 @@ function showCartNotification() {
     }, 2000);
 }
 
-function openCart() {
+function openCart(e) {
+    e.preventDefault();
     cartModal.style.display = 'block';
 }
 
@@ -133,7 +146,6 @@ if (document.querySelector('.sizes')) {
         });
     });
 }
-
 
 // Global function for removeFromCart
 window.removeFromCart = removeFromCart;
