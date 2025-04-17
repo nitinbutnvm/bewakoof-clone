@@ -456,3 +456,40 @@ body::after {
     .navbar { flex-direction: column; }
     .product-card { width: 100%; }
   }
+
+  /* Mobile Styles (Max-width: 768px) */
+@media (max-width: 768px) {
+    /* Navbar */
+    .top-bar {
+      flex-direction: column;
+      padding: 10px;
+    }
+    
+    .search-bar {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    /* Product Grid */
+    .product-grid {
+      grid-template-columns: 1fr 1fr; /* 2 columns */
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    /* Cart Modal */
+    .cart-modal {
+      width: 100%;
+    }
+  }
+  
+  /* Small Mobiles (Max-width: 480px) */
+  @media (max-width: 480px) {
+    .product-grid {
+      grid-template-columns: 1fr; /* 1 column */
+    }
+    
+    .product-card img {
+      height: 200px;
+    }
+  }
