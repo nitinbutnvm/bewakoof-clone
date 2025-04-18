@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head as index.html -->
+    <title>Checkout | Bewakoof Clone</title>
+</head>
+<body>
+    <!-- Same header as index.html -->
+
+    <main class="checkout-container">
+        <section class="address-section">
+            <h2>Delivery Address</h2>
+            <form id="addressForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="tel" placeholder="Mobile Number" required>
+                <textarea placeholder="Full Address" rows="4" required></textarea>
+                <input type="text" placeholder="Pincode" required>
+                <input type="text" placeholder="City" required>
+            </form>
+        </section>
+
+        <section class="payment-section">
+            <h2>Payment Method</h2>
+            <div class="payment-options">
+                <label><input type="radio" name="payment" checked> Cash on Delivery</label>
+                <label><input type="radio" name="payment"> Credit/Debit Card</label>
+                <label><input type="radio" name="payment"> UPI</label>
+            </div>
+        </section>
+
+        <section class="order-summary">
+            <h2>Order Summary</h2>
+            <div id="checkoutItems"></div>
+            <div class="total-amount">
+                <span>Total:</span>
+                <span id="checkoutTotal">₹0</span>
+            </div>
+            <button id="placeOrderBtn">Place Order</button>
+        </section>
+    </main>
+
+    <!-- Same footer and cart modal as index.html -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -204,6 +204,52 @@ loginBtn.addEventListener('click', () => {
 if(localStorage.getItem('loggedInUser')) {
   document.querySelector('.fa-user').classList.add('logged-in');
 }
+// Checkout Functions
+function renderCheckoutItems() {
+    if (!document.getElementById('checkoutItems')) return;
+    
+    const checkoutItems = document.getElementById('checkoutItems');
+    checkoutItems.innerHTML = '';
+    
+    cart.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'checkout-item';
+        itemElement.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <div>
+                <h4>${item.name}</h4>
+                <p>₹${item.price} x ${item.quantity}</p>
+            </div>
+        `;
+        checkoutItems.appendChild(itemElement);
+    });
+    
+    document.getElementById('checkoutTotal').textContent = `₹${calculateTotal()}`;
+}
+
+function calculateTotal() {
+    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+}
+
+// Place Order Button
+if (document.getElementById('placeOrderBtn')) {
+    document.getElementById('placeOrderBtn').addEventListener('click', () => {
+        if (cart.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+        
+        alert(`Order placed successfully!\nTotal: ₹${calculateTotal()}`);
+        cart = [];
+        updateCart();
+        window.location.href = 'index.html';
+    });
+}
+
+// When checkout page loads
+if (window.location.pathname.includes('checkout.html')) {
+    renderCheckoutItems();
+}
 
 // Global function for removeFromCart
 window.removeFromCart = removeFromCart;
