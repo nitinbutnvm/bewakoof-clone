@@ -147,6 +147,64 @@ if (document.querySelector('.sizes')) {
     });
 }
 
+// Login System
+function showLogin() {
+    document.getElementById('loginModal').style.display = 'block';
+  }
+  
+  function closeLogin() {
+    document.getElementById('loginModal').style.display = 'none';
+  }
+  
+  function login() {
+    const email = document.getElementById('loginEmail').value;
+    localStorage.setItem('user', email.split('@')[0]);
+    alert(`Welcome ${email.split('@')[0]}!`);
+    closeLogin();
+  }
+  
+  // Attach Events
+  document.querySelector('.fa-user').addEventListener('click', showLogin);
+  document.querySelector('.close-login').addEventListener('click', closeLogin);
+
+
+
+// Login System
+const loginModal = document.getElementById('loginModal');
+const loginBtn = document.getElementById('loginBtn');
+
+// Open modal when user icon clicked
+document.querySelector('.fa-user').addEventListener('click', () => {
+  loginModal.style.display = 'block';
+});
+
+// Close modal
+document.querySelector('.close-login').addEventListener('click', () => {
+  loginModal.style.display = 'none';
+});
+
+// Login function
+loginBtn.addEventListener('click', () => {
+  const email = document.getElementById('loginEmail').value;
+  const password = document.getElementById('loginPassword').value;
+  
+  if(email && password) {
+    localStorage.setItem('loggedInUser', email);
+    alert(`Welcome back! ${email}`);
+    loginModal.style.display = 'none';
+    
+    // Update UI
+    document.querySelector('.fa-user').classList.add('logged-in');
+  } else {
+    alert('Please enter both email and password!');
+  }
+});
+
+// Check if user is already logged in
+if(localStorage.getItem('loggedInUser')) {
+  document.querySelector('.fa-user').classList.add('logged-in');
+}
+
 // Global function for removeFromCart
 window.removeFromCart = removeFromCart;
 
